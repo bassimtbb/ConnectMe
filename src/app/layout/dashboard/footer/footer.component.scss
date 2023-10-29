@@ -1,0 +1,38 @@
+.footer{
+ 
+    width:100%;
+     background:#ffffff ;
+    
+
+    i{
+        line-height: 50px;
+        color: #8fc9d3;
+        font-size: 19px;
+        margin-left:22px;
+        margin-right:20px;
+
+
+    }
+    mat-divider{
+        background-color:#ffffff;
+    }
+
+    a{          text-transform: capitalize;
+        text-decoration: none;
+        color: #8fc9d3;
+        font-family:'Nunito Sans', 'sans-serif';
+        font-size: 17px;
+        text-align: center;
+        margin-left: 27px;
+      }
+
+
+}   
+ #chevron {
+        transition: 300ms ease-in-out;
+        transform: rotate(0deg);
+        
+        }
+      #chevron.rotated{ 
+        transform: rotate(180deg);
+      }

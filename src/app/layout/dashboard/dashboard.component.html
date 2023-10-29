@@ -1,0 +1,13 @@
+
+<app-headerd></app-headerd>
+        
+
+<mat-drawer-container  autosize>
+        <mat-drawer  mode="side" opened >
+                <app-footer (open)="sideBarToggler()"></app-footer>
+                <app-navbar [isOpen]="openn" ></app-navbar>
+        </mat-drawer>
+        <mat-drawer-content>
+                <router-outlet></router-outlet>
+        </mat-drawer-content>
+f

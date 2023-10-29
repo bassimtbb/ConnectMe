@@ -1,0 +1,87 @@
+<div class="sec" onload="myFunction()">
+    <div class="titre">
+                <h1>ConnectMe</h1>
+                <p>YOUR PATH TO PORFESSIONAL SUCCESS</p>
+                <h2>Tell us what you need done</h2>
+                <p>Contact skilled freelancers within minutes. View profiles, ratings, portfolios and chat with them.</p>
+                <p> Pay the freelancer only when you are 100% satisfied with their work.</p>
+                            </div>
+    <div class="card">
+        
+        <form action="#">
+            <div class="sec1">
+               
+                <div class="form__group field">
+                    <label for="namep" class="form__label">Choose a name for your project </label><br>
+                    <input type="text" class="form__field" placeholder="" name="namep" id='namep' required />
+                  </div>
+
+                  <div class="form__group field">
+                    <label for="disc" class="form__label">Tell us more about your project</label><br>
+                    <textarea  class="form__field" placeholder="" name="disc" id='disc' required ></textarea>
+                  </div>
+                  <div class="form__group field">
+                    <label for="disc" class="form__label">What skills are required?</label><br>
+                    <p>Enter up to 5 skills that best describe your project. Freelancers will use these <br>skills to find projects they are most interested and experienced in.</p>
+                    <div  class="chips" >
+                      <mat-chip-grid #chipGrid aria-label="Enter skills">
+                        <mat-chip-row *ngFor="let skill of skills"
+                                      (removed)="remove(skill)"
+                                      [editable]="true"
+                                      (edited)="edit(skill, $event)"
+                                      [aria-description]="'press enter to edit ' + skill.name">
+                          {{skill.name}}
+                          <button matChipRemove [attr.aria-label]="'remove ' + skill.name">
+                            <mat-icon>cancel</mat-icon>
+                          </button>
+                        </mat-chip-row>
+                        <div >
+                        <input class="inputch" placeholder="Enter Skills here ...."
+                               [matChipInputFor]="chipGrid"
+                               [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                               [matChipInputAddOnBlur]="addOnBlur"
+                               (matChipInputTokenEnd)="add($event)"/></div>
+                      </mat-chip-grid>
+                    </div>
+                  </div>
+
+                  <div class="form__group field">
+                    <label for="file" class="form__label">Upload file</label><br>
+                    <input id="file" class="input-file"   type="file">
+                  </div>
+                  
+                  <div class="form__group field">
+                    <label  class="form__label">How do you want to pay?</label><br>
+                      <mat-radio-group  aria-label="Select an option">
+                        <mat-radio-button  color="primary" value="payH">Pay by the hour</mat-radio-button>
+                        <mat-radio-button  color="primary" value="payF">Pay fixed price</mat-radio-button>
+                      </mat-radio-group>
+                  </div>
+
+                  <div class="form__group field">
+                    <label  class="form__label">What is your estimated budget?</label><br>
+                    <select>
+                      <option>USD</option>
+                      <option>EUR</option>
+                      <option>DNT</option>
+                    </select>
+                    <select>
+                      <option>Micro Project (10 - 30 ) </option>
+                      <option>Simple project (30 - 250 ) </option> 
+                      <option>Very small project (250 - 750 ) </option>
+                      <option>Small project (750 - 1,500 ) </option>
+                      <option>Medium project (1,500 - 3,000 ) </option>
+                      <option>Large project (3,000 - 5,000 )</option>
+                      <option>Larger project (5,000 - 10,000 ) </option>
+                      <option>Very Large project (10,000 - 20,000 ) </option>
+                      <option>Huge project (20,000 - 50,000 ) </option>
+                      <option>Major project (50,000+ ) </option>
+                    </select>
+
+                  </div>
+
+                  <div class="submit"  ><input routerLinkActive="List-item-active" routerLink="/dashboard" type="submit" value="Post my projet"></div>
+            </div>
+        </form>
+    </div>
+</div>

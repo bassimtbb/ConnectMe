@@ -1,0 +1,71 @@
+<mat-sidenav-container *ngIf="type" autosize>
+    <mat-nav-list >
+        <mat-list-item class="item">
+           <i class="fa-solid fa-house" ></i>            
+            <span *ngIf="isOpen">
+                <a >Home</a>
+            </span>
+        </mat-list-item>
+        <mat-list-item routerLinkActive="List-item-active" routerLink="/poster" class="item">
+            <i class="fa-solid fa-folder-plus"></i>            
+            <span *ngIf="isOpen">
+                <a >Poste a project</a>
+            </span>
+        </mat-list-item>
+        <mat-list-item  routerLinkActive="List-item-active" routerLink="/myprojects" class="item">
+            <i class="fa-solid fa-folder-tree"></i>
+            <span *ngIf="isOpen">
+                <a >My projects</a>
+            </span>
+        </mat-list-item>
+        <mat-list-item  routerLinkActive="List-item-active" routerLink="/history"class="item">
+            <i class="fa-solid fa-clock-rotate-left"></i>           
+            <span *ngIf="isOpen">
+                <a >History</a>
+            </span>
+        </mat-list-item>
+        <mat-list-item routerLinkActive="List-item-active" routerLink="/Askhelp" class="item">
+            <i class="fa-solid fa-circle-question"></i>            
+            <span *ngIf="isOpen">
+                <a >Ask for help</a>
+            </span>
+        </mat-list-item>
+    </mat-nav-list>
+</mat-sidenav-container>
+
+
+
+<mat-sidenav-container *ngIf="!type" autosize>
+    <mat-nav-list >
+        <mat-list-item class="item">
+           <i class="fa-solid fa-house" ></i>            
+            <span *ngIf="isOpen">
+                <a >Home</a>
+            </span>
+        </mat-list-item>
+        <mat-list-item routerLinkActive="List-item-active" routerLink="/Recherchep" class="item">
+            <i class="fa-solid fa-magnifying-glass"></i>                        
+            <span *ngIf="isOpen">
+                <a >Search project</a>
+            </span>
+        </mat-list-item>
+        <mat-list-item  routerLinkActive="List-item-active" routerLink="/myprojectsF" class="item">
+            <i class="fa-solid fa-folder-tree"></i>
+            <span *ngIf="isOpen">
+                <a >My projects</a>
+            </span>
+        </mat-list-item>
+        <mat-list-item  routerLinkActive="List-item-active" routerLink="/history"class="item">
+            <i class="fa-solid fa-clock-rotate-left"></i>           
+            <span *ngIf="isOpen">
+                <a >History</a>
+            </span>
+        </mat-list-item>
+        <mat-list-item routerLinkActive="List-item-active" routerLink="/Askhelp" class="item">
+            <i class="fa-solid fa-circle-question"></i>            
+            <span *ngIf="isOpen">
+                <a >Ask for help</a>
+            </span>
+        </mat-list-item>
+    </mat-nav-list>
+</mat-sidenav-container>

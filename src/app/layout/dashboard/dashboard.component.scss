@@ -1,0 +1,40 @@
+:host{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+mat-drawer{
+    box-shadow: 2px 2px 2px 0px rgb(230, 230, 230);
+    background: #ffffff;
+    height: auto;
+    width: auto;
+    max-width: 240px;
+    border-right: 2px solid rgb(230, 230, 230);
+    }
+mat-drawer-container{
+    height: 100%;
+    width: auto;
+}
+
+app-headerd{
+    box-shadow: 2px 2px 2px 0px rgb(230, 230, 230);
+    border-bottom: 2px solid rgb(230, 230, 230);
+    height:10%;
+    width: auto;
+}
+mat-drawer-content{
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+app-footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: auto;
+    background-color:transparent;
+
+   }
+

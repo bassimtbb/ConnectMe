@@ -1,0 +1,87 @@
+<div class="sec" onload="myFunction()">
+    <div class="card1">
+        <div class="Cleft">
+            <img class="pdp"  src="https://pbs.twimg.com/media/Du2gh3XXgAAy2YS.jpg" >
+            <p class="statut">I'm {{profile.statut}}<p>
+            <p class="origine">{{profile.origine}}<p>
+            <p class="cost">{{profile.cost}}$ per Houre<p>
+
+        </div>               
+        <div class="Cright">
+            <p class="username">{{profile.username}}<p>
+            <p class="title">{{profile.title}}<p>
+            <p class="email">Email : {{profile.email}}<p>
+            <p class="Project">{{profile.openP}} Open projects | {{profile.Tprojet}} completed projects<p>
+            <p class="bio">{{profile.bio}}</p>
+            <button calss="btnP" mat-raised-button color="primary">Edit profil</button>
+
+        </div>            
+    </div>
+    <div class="card2">
+    <mat-accordion class="example-headers-align">
+        <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+                Education
+            </mat-panel-title>
+            <mat-panel-description>
+              Type Education
+              
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+      
+          <mat-form-field appearance="fill">
+            <mat-label>Degree</mat-label>
+            <input matInput>
+          </mat-form-field>
+      
+          <mat-form-field appearance="fill">
+            <mat-label>University/College</mat-label>
+            <input matInput type="text" >
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Country</mat-label>
+            <input matInput type="text" >
+          </mat-form-field>
+          <mat-action-row>
+            <button mat-button color="primary" (click)="nextStep()">add</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+    </mat-accordion>
+    </div>
+    <div class="card2">
+        <mat-accordion class="example-headers-align">
+            <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Qualifications
+                </mat-panel-title>
+                <mat-panel-description>
+                  Type your Qualifications
+                  
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+          
+              <mat-form-field appearance="fill">
+                <mat-label size="220px"> Certificate </mat-label>
+                <input matInput>
+              </mat-form-field>
+          
+              <mat-form-field appearance="fill">
+                <mat-label>Conferring Organization</mat-label>
+                <input matInput type="text" >
+              </mat-form-field>
+              <mat-form-field appearance="fill">
+                <mat-label>Summary</mat-label>
+                <textarea matInput  ></textarea>
+              </mat-form-field>
+              <mat-action-row>
+                <button mat-button color="primary" (click)="nextStep()">Add</button>
+              </mat-action-row>
+            </mat-expansion-panel>
+        </mat-accordion>
+        </div>
+        
+            
+</div>

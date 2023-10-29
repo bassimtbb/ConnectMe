@@ -1,0 +1,81 @@
+
+<div class="sec">
+    <form  >
+    <div class="card"  id="signu">
+        <div>
+            <div class="sec1">
+                <p>Sign Up</p>
+            </div>
+            <div class="sec2">
+                <div class="col1">
+                    <div class="form__group field">
+                        <input type="email" class="form__field" placeholder="Email" name="email" id='Email' required />
+                        <label for="Email" class="form__label">Email</label>
+                    </div> 
+                    <div class="form__group field">
+                        <input type="text" class="form__field" placeholder="First Name" name="first_name" id='name' required />
+                        <label for="name" class="form__label">First Name</label>
+                    </div>
+                    <div class="form__group field">
+                        <input type="date" class="form__field" placeholder="Birthday" name="birthday" id='birthday' required />
+                        <label for="birthday" class="form__label">Birthday</label>
+                    </div>
+                    <div class="radio">
+                        <p class="titre">Gender :</p>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio"  value ="male"name="genre" id="male">
+                            <label class="form-check-label" for="male">
+                            Male
+                            </label>
+                         </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" value ="female" name="genre" id="female" checked>
+                            <label class="form-check-label" for="female">
+                            Female
+                            </label>
+                         </div>
+                    </div>
+                </div>
+                <div class="col2">
+                    <div class="form__group field">
+                        <input type="password" class="form__field" placeholder="password" name="password" id='password' required />
+                        <label for="password" class="form__label">password</label>
+                    </div>
+                    <div class="form__group field">
+                        <input type="text" class="form__field" placeholder="Last Name" name="last_name" id='lastn' required />
+                        <label for="lastn" class="form__label">Last Name</label>
+                    </div>
+                  
+                    <div class="form__group field">
+                        <input type="number" class="form__field" placeholder="Mobile number" name="phone_num" id='phone' required />
+                        <label for="phone" class="form__label">Mobile number</label>
+                    </div>
+                    <div class="radio">
+                        <p class="titre">Type :</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="type" id="freelance">
+                            <label class="form-check-label" for="freelance">
+                            Freelance
+                            </label>
+                         </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="type" id="client" checked>
+                            <label class="form-check-label" for="client">
+                            Client
+                            </label>
+                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sec3">
+                <div class="submit"><input type="submit" (click)="toggel()" value="Next" id="btn_su"></div>
+                <a routerLinkActive="List-item-active" routerLink="/login">Already have an account?</a>
+            </div>
+       
+        </div>
+    </div>
+</form>
+</div>
+
+

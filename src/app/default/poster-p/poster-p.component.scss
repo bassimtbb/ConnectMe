@@ -1,0 +1,129 @@
+.sec{
+    padding-top: 5%;
+    padding-right: 25%;
+    background-color: rgb(26,26,57);
+    background: linear-gradient(49deg, rgba(26,26,57,1) 12%, rgba(9,13,99,1) 100%);   
+    height: 60%;
+    width: 100%;
+    background-size: cover;
+    display: grid;
+    background-position: center;  
+    align-items: center;
+    justify-content: center;  
+    .titre{
+        h1{
+            font-family: serif;
+            font-weight:700 ;
+            font-size: 57px;color: #ffffff;
+        }
+        h2{
+            padding-top:40px ;
+            font-family: serif;
+            font-weight:600 ;
+            font-size: 30px;color: #ffffff;
+        }   
+        p{
+            padding-bottom: 10px;
+            font-family:Arial, Helvetica, sans-serif, "Times New Roman", Georgia, serif;
+            font-weight:500 ;
+            font-size: small;color: #ffffff;
+        }
+        a:link { text-decoration: none; }
+        padding-bottom: 40px;
+        line-height:0px;
+    }     
+    .card{
+        padding-left: 10%;
+        padding-top:5% ;
+        background-color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: left;    
+        width: 650px;
+        height: fit-content;
+        overflow: visible;
+        color: black;
+        box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+        align-items: center;
+        .sec1{
+            padding-bottom:30px ;
+            input{
+                height: 30px;
+                width: 500px;
+                border: 1px solid;
+            }
+            textarea{
+                border: 1px solid;
+                height: 100px;
+                width: 500px;
+            }
+            label{
+                padding-top: 5px;
+                padding-bottom: 5%;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-weight:700 ;
+                font-size: 17px;
+            }
+            .form__group {
+                width: auto;
+                height: auto;
+                padding-bottom:5% ;
+
+            }
+            select{
+                height: 43px;
+                border-radius: 4%;
+                margin-right: 3%;
+                font-size: medium;
+            }
+            .submit{     
+                
+
+                input[type=submit] {
+                    border-radius: 5px;
+                    background-color: #281372;
+                    border: none;
+                    color: #fff;
+                    font-size: large;
+                    text-decoration: none;
+                    cursor: pointer;
+                    height: 50px;
+                }  
+                padding-top: 30px;
+                text-align: center;
+            }
+        }  
+        input {
+            padding-top: 5px;
+            border-color: #fff;
+        }
+        
+        input::file-selector-button {
+            font-weight: bold;
+            color: black;
+            
+           border: thin solid grey;
+            border-radius: 3px;
+        }
+        
+          
+    }
+
+    .chips{
+        border: 1px solid black;
+        border-radius: 2%;
+        padding: 4px;
+        max-width: 500px;
+    }
+    .inputch{
+        outline: none;
+        border: 1px solid white;
+
+        max-width: 450px;
+      }
+      mat-chip-row{
+        background-color: aliceblue;
+        
+      }
+}
+

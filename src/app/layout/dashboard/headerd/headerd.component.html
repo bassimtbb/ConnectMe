@@ -1,0 +1,63 @@
+
+
+<mat-toolbar >
+    <mat-toolbar-row>
+        <div class="titre">
+            <a href="#"><h1>ConnectMe</h1></a>
+        </div>
+        <div class="centre">
+            <input type="search" class="search-bar" placeholder="Search...">
+            </div>
+                    <div class="notif">
+                        <button mat-icon-button >
+                            <i class="far fa-bell"></i>
+                        </button>
+                    </div>
+                    <div class="drop">
+                        <a class="nav-link lh-1 pe-0 show" [matMenuTriggerFor]="menu"  id="navbarDropdownUser"  role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="true">
+                            <div class="avatar avatar-l ">
+                              <img class="rounded-circle " src="https://pbs.twimg.com/media/Du2gh3XXgAAy2YS.jpg" alt="">
+                            </div>
+                          </a>
+    
+                        <mat-menu #menu="matMenu">
+                            <div class="profile-card">
+                                <div class="header">
+                                     <h2>Bessem Tabbeb</h2>
+                                </div>
+                                <div class="menu_I">
+                                    <button routerLinkActive="List-item-active" routerLink="/ProfileC" mat-menu-item>
+                                        <mat-icon>person_outline</mat-icon>
+                                        Profile
+                                    </button>
+                                    <button routerLinkActive="List-item-active" routerLink="/Settings" mat-menu-item>
+                                        <mat-icon>settings</mat-icon>
+                                        Settings & Privacy
+                                    </button>
+    
+                                    <button mat-menu-item>
+                                        <mat-icon>help_outline</mat-icon>
+                                        Help Center
+                                    </button>
+    
+                                    <mat-divider></mat-divider>
+    
+                                    <button mat-menu-item>
+                                        <mat-icon>person_add</mat-icon>
+                                        Add another account
+                                    </button>
+    
+                                    <mat-divider></mat-divider>
+                                <button  mat-menu-item routerLinkActive="List-item-active" routerLink="/acceuil">
+                                        <mat-icon class="out">exit_to_app</mat-icon>
+                                        Sign out
+                                    </button></div>
+                                
+                            </div>
+                        </mat-menu>
+                    </div>
+                
+           
+    </mat-toolbar-row>
+</mat-toolbar>
+

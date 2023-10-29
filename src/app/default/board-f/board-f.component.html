@@ -1,0 +1,67 @@
+
+<h1 class="title">Board</h1>
+
+<div class="sec2">
+    <mat-form-field class="example-full-width">
+        <mat-label>Create a issue</mat-label>
+        <textarea matInput #issue placeholder="What needs to be done ?"></textarea>
+      </mat-form-field><br>
+      <button mat-raised-button (click)="addissue(issue.value)">Create</button>
+      
+      <mat-divider></mat-divider>
+  <div cdkDropListGroup>      
+    <div class="example-container">
+      <h2>TO DO</h2>
+  
+      <div
+        cdkDropList
+        [cdkDropListData]="todo"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let item of todo " cdkDrag>{{item}}</div>
+      </div>
+    </div>
+    <div class="example-container">
+      <h2>IN PROGRESS</h2>
+      <div
+        cdkDropList
+        [cdkDropListData]="inprogress"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let item of inprogress" cdkDrag>{{item}}</div>
+      </div>
+    </div>
+    <div class="example-container">
+      <h2>DONE</h2>
+      <div
+        cdkDropList
+        [cdkDropListData]="done"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="sec3">
+<mat-divider></mat-divider>
+
+
+
+<mat-form-field class="example-full-width">
+  <mat-label>Leave a comment</mat-label>
+  <textarea matInput #commentF placeholder=""></textarea>
+</mat-form-field><br>
+<button mat-raised-button (click)="addItem(commentF.value)">Send</button>
+  <mat-card *ngFor="let item of comment" class="example-card">
+    <mat-card-content>
+      <h2 class="authorC">{{item.authorT}} : {{item.author}} |{{item.date | date: 'dd MMM yyyy hh:mm a'}}</h2>
+      <p class="textC">{{item.text}} </p>
+    </mat-card-content>
+  </mat-card> 
+</div>
+
+
+
+
+
